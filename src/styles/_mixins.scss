@@ -28,7 +28,7 @@
 @mixin notification-keyframes($direction, $margin-bottom: $window-padding) {
     $animation-name: '#{$direction}#{$margin-bottom}';
 
-    @keyframes :local(#{$animation-name}-enter) {
+    @keyframes #{$animation-name}-enter {
         0% {
             #{$direction}: -#{$notification-max-width};
             opacity:       0;
@@ -39,7 +39,7 @@
         }
     }
 
-    @keyframes :local(#{$animation-name}-leave) {
+    @keyframes #{$animation-name}-leave {
         $translate: 'translateX';
         $value: 100%;
 
